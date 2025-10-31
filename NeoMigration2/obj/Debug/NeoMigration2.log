@@ -1,7 +1,2 @@
-﻿  main.cpp
-  obstacle.cpp
-  player.cpp
-  Generando código...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo _main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\lib\raylib-5.5_win64_msvc16\lib\raylib.lib : warning LNK4272: el tipo de máquina de biblioteca 'x64' está en conflicto con el tipo de máquina de destino 'x86'
-C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\bin\Debug\NeoMigration2.exe : fatal error LNK1120: 1 externos sin resolver
+﻿  player.cpp
+  NeoMigration2.vcxproj -> C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\bin\Debug\NeoMigration2.exe

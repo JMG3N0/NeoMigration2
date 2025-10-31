@@ -5,13 +5,17 @@ namespace NM2
 	Player initPlayer(Player& player)
 	{
 		player.alive = true;
-		player.pos = {static_cast<float>(GetScreenWidth()), static_cast<float>(GetScreenHeight())};
+		
+		//player.pos.x = static_cast<float>((GetScreenWidth() / 2));
+		player.pos.x = 800.f / 2;
+		//player.pos.y = static_cast<float>((GetScreenHeight() / 2));
+		player.pos.y = 600.0f / 2;
 		player.score = 0;
 		player.highScore = 0;
-		player.height = 10;
-		player.width = 10;
-		player.jumpPower = 50.0f;
-		player.gravity = 9.8f;
+		player.height = 50;
+		player.width = 50;
+		player.jumpPower = 200000.0f;
+		player.gravity = 90.8f;
 
 		return player;
 	}
@@ -19,7 +23,10 @@ namespace NM2
 	Player resetPlayer(Player& player)
 	{
 		player.alive = true;
-		player.pos = { static_cast<float>(GetScreenWidth()), static_cast<float>(GetScreenHeight()) };
+		//player.pos.x = static_cast<float>((GetScreenWidth() / 2));
+		player.pos.x = 800.f/2;
+		//player.pos.y = static_cast<float>((GetScreenHeight() / 2));
+		player.pos.y = 600.0f / 2;
 		player.score = 0;
 
 		return player;
@@ -32,12 +39,14 @@ namespace NM2
 		if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_W) || IsKeyPressed(KEY_UP))
 		{
 			player.pos.y -= player.jumpPower * GetFrameTime();
+
+			if (player.pos.y < 0.0f)
+			{
+				player.pos.y = 0.0f;
+			}
 		}
 
-		if (player.pos.y < 0.0f )
-		{
-			player.pos.y = 0.0f;
-		}
+		
 
 		if (player.pos.y >= static_cast<float>(GetScreenHeight()))
 		{
