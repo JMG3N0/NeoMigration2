@@ -1,3 +1,0 @@
-NeoMigration2/NeoMigration2/.vs
-NeoMigration2/NeoMigration2/bin
-NeoMigration2/NeoMigration2/obj
