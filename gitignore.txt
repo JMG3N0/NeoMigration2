@@ -1,0 +1,3 @@
+NeoMigration/.vs
+NeoMigration/bin
+NeoMigration/obj

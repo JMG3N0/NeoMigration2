@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{0edcf2fc-f4e2-4817-99a5-8b8df8660583}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{5c52c3fd-69a1-42c9-b4c3-f59bb076591b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cpp\main.cpp" />
+    <ClCompile Include="src\cpp\obstacle.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cpp\player.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\h\obstacle.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\h\player.h">
+      <Filter>h</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
