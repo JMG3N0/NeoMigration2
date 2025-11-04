@@ -1,2 +1,7 @@
 ﻿  main.cpp
+  obstacle.cpp
+  player.cpp
+  Generando código...
+C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\src\cpp\player.cpp(51,87): warning C4390: ';': se encontró una instrucción controlada vacía; ¿es esa la intención?
+C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\src\cpp\obstacle.cpp(59,1): warning C4715: 'NM2::checkCollision': no todas las rutas de acceso de control devuelven un valor
   NeoMigration2.vcxproj -> C:\Users\Aula 2\Desktop\NeoMigration2\NeoMigration2\bin\Debug\NeoMigration2.exe

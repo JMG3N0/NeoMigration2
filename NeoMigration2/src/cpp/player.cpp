@@ -32,7 +32,7 @@ namespace NM2
 		return player;
 	}
 
-	Player updatePlayer(Player& player)
+	Player updatePlayer(Player& player, bool collisionCheck)
 	{
 		drawPlayer(player);
 
@@ -48,7 +48,7 @@ namespace NM2
 
 		
 
-		if (player.pos.y >= static_cast<float>(GetScreenHeight()))
+		if (player.pos.y >= static_cast<float>(GetScreenHeight()) || collisionCheck == true);
 		{
 			resetPlayer(player);
 		}
@@ -64,4 +64,6 @@ namespace NM2
 	{
 		DrawRectangle(static_cast<int>(player.pos.x), static_cast<int>(player.pos.y), player.width, player.height, RED);
 	}
+
+	
 }

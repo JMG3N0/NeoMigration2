@@ -15,11 +15,13 @@ int main()
 
 	while (!WindowShouldClose())
 	{
+
+		bool hasCollided = checkCollision(p1, obs);
 		BeginDrawing();
-		ClearBackground(BLACK);
-		updatePlayer(p1);
-		updateObstacle(obs);
-		DrawText("0.1", 780, 580, 20, WHITE);
+		ClearBackground(BLACK);	
+		updateObstacle(obs, hasCollided);
+		updatePlayer(p1, hasCollided);
+		DrawText("0.1", 770, 580, 20, WHITE);
 		EndDrawing();
 	}
 

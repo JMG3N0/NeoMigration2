@@ -20,7 +20,7 @@ namespace NM2
 
 	Player initPlayer(Player& player);
 	Player resetPlayer(Player& player);
-	Player updatePlayer(Player& player);
+	Player updatePlayer(Player& player, bool collisionCheck);
 	void drawPlayer(Player player);
 
 
