@@ -13,12 +13,12 @@ namespace NM2
 		float speedCap;
 		int safeSpace;
 		int width;
-		
+		bool canGivePoint;
 	};
 
 	Obstacle initObstacle(Obstacle& obstacle);
 	Obstacle updateObstacle(Obstacle& obstacle, bool collided);
 	Obstacle resetObstacle(Obstacle& obstacle);
 	void drawObstacle(Obstacle obstacle);
-	bool checkCollision(Player player, Obstacle obstacle);
+	bool checkCollision(Player& player, Obstacle& obstacle);
 }

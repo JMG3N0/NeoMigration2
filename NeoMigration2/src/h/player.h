@@ -16,6 +16,7 @@ namespace NM2
 		float fallSpeed;
 		float gravity;
 		float jumpPower;
+		//float cooldown;
 	};
 
 	Player initPlayer(Player& player);

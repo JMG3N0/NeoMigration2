@@ -17,6 +17,8 @@ namespace NM2
 		player.jumpPower = 50000.0f;
 		player.gravity = 100.0f;
 		player.fallSpeed = 0.0f;
+	//	player.cooldown = 0.0f;
+		
 		return player;
 	}
 
@@ -36,18 +38,23 @@ namespace NM2
 	{
 		drawPlayer(player);
 
+		
+
+		
 		if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_W) || IsKeyPressed(KEY_UP))
 		{
 			player.fallSpeed = 0.0f;
 			player.pos.y -= player.jumpPower * GetFrameTime();
 
-			if (player.pos.y < 0.0f)
+			if (player.pos.y - static_cast<float>(player.height/4) < 0.0f)
 			{
 				player.pos.y = 0.0f;
 			}
 			player.fallSpeed -= (player.jumpPower/2.0f) * GetFrameTime();
+			//player.cooldown = 0.001f;
 		}
-
+		
+		
 		
 
 		if (player.pos.y >= static_cast<float>(GetScreenHeight()) || collided == true)

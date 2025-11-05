@@ -11,11 +11,12 @@ namespace NM2
 		obstacle.safeSpace = 100;
 		obstacle.width = 20;
 		obstacle.speedCap = 300.0f;
+		obstacle.canGivePoint = true;
 
 		return obstacle;
 	}
 
-	Obstacle updateObstacle(Obstacle& obstacle, bool collided)
+	Obstacle updateObstacle(Obstacle& obstacle,  bool collided)
 	{
 		drawObstacle(obstacle);
 
@@ -29,6 +30,7 @@ namespace NM2
 			{
 				obstacle.speed = 50.0f;
 			}
+			
 
 			return obstacle;
 		}
@@ -43,7 +45,9 @@ namespace NM2
 		{
 			obstacle.speed += 25.0f;
 		}
-		
+		obstacle.pos.y = static_cast<float>(GetRandomValue(0, GetScreenHeight() - obstacle.safeSpace));
+		obstacle.canGivePoint = true;
+
 		return obstacle;
 	}
 	
@@ -54,16 +58,25 @@ namespace NM2
 		
 	}
 
-	bool checkCollision(Player player, Obstacle obstacle)
+	bool checkCollision(Player& player, Obstacle& obstacle)
 	{
-		if (player.pos.y - static_cast<float>(player.height/2) < obstacle.pos.y || player.pos.y + static_cast<float>(player.height / 2) > (obstacle.pos.y + obstacle.safeSpace) )
-		{
+		
 			if (player.pos.x + static_cast<float>(player.width) >= obstacle.pos.x && player.pos.x - static_cast<float>(player.width) <= obstacle.pos.x + static_cast<float>(obstacle.width))
 			{
-				return true;
+				if (player.pos.y - static_cast<float>(player.height / 2) < obstacle.pos.y || player.pos.y + static_cast<float>(player.height / 2) > (obstacle.pos.y + obstacle.safeSpace))
+				{
+					return true;
+				}
+				if (obstacle.canGivePoint == true)
+				{
+					player.score++;
+					obstacle.canGivePoint = false;
+				}
+				
+				
 			}
 
-		}
+		
 		
 		
 			return false;

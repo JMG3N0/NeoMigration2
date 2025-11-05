@@ -24,6 +24,8 @@ int main()
 		updateObstacle(obs, hasCollided);
 		updatePlayer(p1, hasCollided);
 		DrawText("0.1", 770, 580, 20, WHITE);
+		DrawTextEx(GetFontDefault(), TextFormat("Score: %d", p1.score), {10.0f, 580.0f}, 20.0f, 1.0f, WHITE);
+		//DrawText("Score: ", 10, 580, 20, WHITE);
 		EndDrawing();
 	}
 
