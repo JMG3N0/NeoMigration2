@@ -10,12 +10,14 @@ namespace NM2
 	{
 		Vector2 pos;
 		float speed;
+		float speedCap;
 		int safeSpace;
 		int width;
+		
 	};
 
 	Obstacle initObstacle(Obstacle& obstacle);
-	Obstacle updateObstacle(Obstacle& obstacle, bool collisionCheck);
+	Obstacle updateObstacle(Obstacle& obstacle, bool collided);
 	Obstacle resetObstacle(Obstacle& obstacle);
 	void drawObstacle(Obstacle obstacle);
 	bool checkCollision(Player player, Obstacle obstacle);

@@ -13,14 +13,14 @@ namespace NM2
 		int highScore;
 		int height;
 		int width;
-		//float speed;
+		float fallSpeed;
 		float gravity;
 		float jumpPower;
 	};
 
 	Player initPlayer(Player& player);
 	Player resetPlayer(Player& player);
-	Player updatePlayer(Player& player, bool collisionCheck);
+	Player updatePlayer(Player& player, bool collided);
 	void drawPlayer(Player player);
 
 
