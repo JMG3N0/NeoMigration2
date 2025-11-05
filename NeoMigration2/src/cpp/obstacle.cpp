@@ -54,7 +54,7 @@ namespace NM2
 	void drawObstacle(Obstacle obstacle)
 	{
 		DrawRectangle(static_cast<int>(obstacle.pos.x), 0, obstacle.width, GetScreenHeight(), YELLOW);
-		DrawRectangle(static_cast<int>(obstacle.pos.x), static_cast<int>(obstacle.pos.y), obstacle.width, static_cast<int>(obstacle.safeSpace), BLACK);
+		DrawRectangle(static_cast<int>(obstacle.pos.x), static_cast<int>(obstacle.pos.y), obstacle.width, static_cast<int>(obstacle.safeSpace), RAYWHITE);
 		
 	}
 

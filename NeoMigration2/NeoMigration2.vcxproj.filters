@@ -16,12 +16,18 @@
     <ClCompile Include="src\cpp\player.cpp">
       <Filter>cpp</Filter>
     </ClCompile>
+    <ClCompile Include="src\cpp\screens.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\h\obstacle.h">
       <Filter>h</Filter>
     </ClInclude>
     <ClInclude Include="src\h\player.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\h\screens.h">
       <Filter>h</Filter>
     </ClInclude>
   </ItemGroup>

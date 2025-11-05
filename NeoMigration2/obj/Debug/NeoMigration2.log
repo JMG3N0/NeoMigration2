@@ -1,2 +1,14 @@
-﻿  obstacle.cpp
+﻿  screens.cpp
+C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(38,31): warning C4459: declaration of 'screen' hides global declaration
+      C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(15,13):
+      see declaration of 'NM2::screen'
+  
+C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(59,30): warning C4459: declaration of 'screen' hides global declaration
+      C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(15,13):
+      see declaration of 'NM2::screen'
+  
+C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(107,33): warning C4459: declaration of 'screen' hides global declaration
+      C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\src\cpp\screens.cpp(15,13):
+      see declaration of 'NM2::screen'
+  
   NeoMigration2.vcxproj -> C:\Users\TEMP\Desktop\NeoMigration2\NeoMigration2\bin\Debug\NeoMigration2.exe
