@@ -188,6 +188,11 @@ namespace NM2
 			
 			DrawTextEx(GetFontDefault(), TextFormat("Score: %d", p1.score), { 10.0f, 580.0f }, 20.0f, 1.0f, BLUE);
 
+			if (IsKeyPressed(KEY_ESCAPE))
+			{
+				screen = Main;
+			}
+
 			break;
 		default:
 			break;
